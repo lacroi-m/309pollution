@@ -5,19 +5,14 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Jan  8 21:58:43 2018 ze
-// Last update Fri Jan 12 01:47:06 2018 ze
+// Last update Tue Jan 23 20:33:25 2018 DESKTOP-FQFT07H
 //
 
 
 #ifndef  __MAIN_HPP__
 # define  __MAIN_HPP__
 
-# include <iostream>
-# include <string>
-# include <cstring>
-# include <fstream>
-# include  <vector>
-
+# include "Deps.hpp"
 # include "Exception.hpp"
 # include "Data.hpp"
 

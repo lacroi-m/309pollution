@@ -5,16 +5,23 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Jan  8 21:58:16 2018 ze
-// Last update Fri Jan 19 12:20:28 2018 DESKTOP-FQFT07H
+// Last update Tue Jan 23 20:41:52 2018 DESKTOP-FQFT07H
 //
 
 #include "Main.hpp"
 
 void				launch(int ac, char **av)
 {
+  //n f x y
   if (ac != 5)
     throw (Err("Wrong Number of arguments"));
-  Data data(av);
+  Data data;
+  data.setN(atoi(av[1]));
+  data.setFile(av[2]);
+  data.setX(atoi(av[3]));
+  data.setY(atoi(av[4]));
+  data.PrintInfo();
+  data.Parse();
 }
 
 int				main(int ac, char **av)
