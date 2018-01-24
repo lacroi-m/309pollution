@@ -5,7 +5,7 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Tue Jan 23 20:19:29 2018 DESKTOP-FQFT07H
-// Last update Wed Jan 24 00:25:47 2018 DESKTOP-FQFT07H
+// Last update Wed Jan 24 10:55:45 2018 DESKTOP-FQFT07H
 //
 
 #include "Data.hpp"
@@ -26,30 +26,38 @@ void				Data::setFile(char *f)
     file.push_back(line);
 }
 
+
+
 void				Data::PrintInfo()
 {
   std::cout << "n = " << n << std::endl;
+  std::cout << "file ="  << std::endl;
   for (size_t x = 0; x < file.size(); x++)
-    std::cout << file[x] << std::endl;
+    std::cout << "\t" << file[x] << std::endl;
   std::cout << "x = " << x << std::endl;
   std::cout << "y = " << y << std::endl;
+  std::cout << "graph ="  << std::endl;
+  for (size_t x = 0; x < graph.size(); x++)
+    std::cout << "\t" << graph[x].getX()<< ":" <<  graph[x].getY() << ":" <<  graph[x].getP() << std::endl;
 }
 
 void				Data::Parse()
 {
-  int		x;
-  int		y;
+  int		xP;
+  int		yP;
   int		p;
   std::string	str;
   
   for (size_t z = 0; z < file.size(); z++)
     {
       str = file[z];
-      x = stoi(str.substr(0, str.find(";")));
+      xP = stoi(str.substr(0, str.find(";")));
       str = str.substr(str.find(";") + 1, str.size());
-      y = stoi(str.substr(0, str.find(";")));
+      yP = stoi(str.substr(0, str.find(";")));
       str = str.substr(str.find(";") + 1, str.size());
-      p = stoi(str.substr(str.find(";") + 1));     
-      // every line set Graph(x, y, p)
+      p = stoi(str.substr(str.find(";") + 1));
+      graph.push_back(Graph(xP, yP, p));
     }
+
+  std::sort(graph.begin(), graph.end(), less_than_key());  
 }

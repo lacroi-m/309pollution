@@ -5,7 +5,7 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Wed Jan 17 22:38:11 2018 DESKTOP-FQFT07H
-// Last update Tue Jan 23 21:10:05 2018 DESKTOP-FQFT07H
+// Last update Wed Jan 24 10:55:15 2018 DESKTOP-FQFT07H
 //
 
 #ifndef  __DATA_HPP__
@@ -27,6 +27,9 @@ public:
     p = _p;
   }
   ~Graph(void){}
+  int				getX(){return x;}
+  int				getY(){return y;}
+  int				getP(){return p;}
 };
 
 class		Data
@@ -53,5 +56,14 @@ public:
   void				Parse();
   void				PrintInfo();
 };
+
+struct less_than_key
+{
+  inline bool operator() (Graph& struct1, Graph& struct2)
+  {
+    return (struct1.getX() < struct2.getX());
+  }
+};
+
 
 #endif /* ! __MAIN_HPP__ */

@@ -5,7 +5,7 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Tue Jan 23 20:32:51 2018 DESKTOP-FQFT07H
-// Last update Tue Jan 23 20:33:05 2018 DESKTOP-FQFT07H
+// Last update Wed Jan 24 18:34:26 2018 DESKTOP-FQFT07H
 //
 
 #ifndef  __DEPS_HPP__
@@ -16,5 +16,6 @@
 # include <cstring>
 # include <fstream>
 # include  <vector>
+# include <algorithm>
 
 #endif /* ! __MAIN_HPP__ */
