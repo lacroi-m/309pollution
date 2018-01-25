@@ -5,10 +5,16 @@
 // Login   <maxime.lacroix@epitech.eu>
 // 
 // Started on  Mon Jan  8 21:58:16 2018 ze
-// Last update Wed Jan 24 10:16:22 2018 DESKTOP-FQFT07H
+// Last update Thu Jan 25 23:50:04 2018 DESKTOP-FQFT07H
 //
 
 #include "Main.hpp"
+
+
+void				bezier(const Data &data)
+{
+  (void)data;
+}
 
 void				launch(int ac, char **av)
 {
@@ -22,6 +28,7 @@ void				launch(int ac, char **av)
   data.setY(atoi(av[4]));
   data.Parse();
   data.PrintInfo();
+  bezier(data);
 }
 
 int				main(int ac, char **av)
